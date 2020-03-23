@@ -15,3 +15,16 @@ void showMatrix(Matrix k){
 	}
 
 }
+
+
+void copyVector(Vector v, Vector &copy){
+	zeroes(copy, v.size());
+	for(int i=0; i<v.size(); i++){
+		copy.at(i) = v.at(i);
+	}
+}
+
+
+void copyMatrix(Matrix k, Matrix &copy){
+	
+}
