@@ -4,6 +4,28 @@
 
 int main(void) {
 
+	Vector example_vector, answer_vector;
+	Matrix example_matrix;
+
+	zeroes(example_vector, 3);
+
+	example_vector.at(0) = 2;
+	example_vector.at(1) = 2;
+	example_vector.at(2) = 2;
+
+	zeroes(example_matrix, 3);
+
+	example_matrix.at(0).at(0) = 1; example_matrix.at(0).at(1) = 1; example_matrix.at(0).at(2) = 1;
+	example_matrix.at(1).at(0) = 1; example_matrix.at(1).at(1) = 1; example_matrix.at(1).at(2) = 1;
+	example_matrix.at(2).at(0) = 1; example_matrix.at(2).at(1) = 1; example_matrix.at(2).at(2) = 1;
+
+	zeroes(answer_vector, 3);
+
+	productMatrixVector(example_matrix, example_vector, answer_vector);
+
+	showVector(answer_vector);
+
+	/* MOSTRANDO VECTOR
 	Vector example_vector, copy_vector; 
 
 	zeroes(example_vector, 4);
@@ -17,7 +39,7 @@ int main(void) {
 
 	showVector(copy_vector);
 	
-	
+	*/
 	
 	/* Matriz 3x3
 	Matrix example_matrix;

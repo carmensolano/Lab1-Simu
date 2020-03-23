@@ -25,6 +25,26 @@ void copyVector(Vector v, Vector &copy){
 }
 
 
-void copyMatrix(Matrix k, Matrix &copy){
-	
+void copyMatrix(Matrix A, Matrix &copy){
+	zeroes(copy, A.size());
+	for (int i = 0; i<A.size(); i++){
+		for (int j=0; j<A.at(0).size(); j++)
+		{
+			copy.at(i).at(j)= A.at(i).at(j);	
+		}
+		
+	}
 }
+
+
+void productMatrixVector(Matrix A, Vector v, Vector &R){
+	for (int fila=0; fila<A.size(); fila++){
+		float cell = 0.0;
+		for(int col=0; col<v.size(); col++)
+			cell+= A.at(fila).at(col) * v.at(col);
+		R.at(fila) += cell;	
+
+		
+	}
+
+}	
