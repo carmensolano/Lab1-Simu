@@ -48,3 +48,11 @@ void productMatrixVector(Matrix A, Vector v, Vector &R){
 	}
 
 }	
+
+
+void productRealMatrix(float real, Matrix M, Matrix &R){
+	zeroes(R, M.size());
+	for(int i=0; i<M.size(); i++)
+		for(int j=0;j<M.at(0).size(); j++)
+			R.at(i).at(j) = real * M.at(i).at(j); 
+}
