@@ -56,3 +56,11 @@ void productRealMatrix(float real, Matrix M, Matrix &R){
 		for(int j=0;j<M.at(0).size(); j++)
 			R.at(i).at(j) = real * M.at(i).at(j); 
 }
+
+Vector sumVector(Vector A, Vector B, int n){
+	Vector R;
+	zeroes(R, n);
+	for(int i=0; i<n; i++)
+		R.at(i) = A.at(i) + B.at(i);
+	return R;	
+}

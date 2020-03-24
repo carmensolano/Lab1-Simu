@@ -4,6 +4,27 @@
 
 int main(void) {
 
+	Vector a, b;
+
+	zeroes(a,5);
+	zeroes(b,5);
+
+	a.at(0) = 1;
+	a.at(1) = 2;
+	a.at(2) = 3;
+	a.at(3) = 4;
+	a.at(4) = 5;
+
+	b.at(0) = 1;
+	b.at(1) = 2;
+	b.at(2) = 3;
+	b.at(3) = 4;
+	b.at(4) = 5;
+
+	showVector(sumVector(a, b, 5));
+	
+	
+	/* Matriz por Real
 	Matrix example_matrix, answer_matrix;
 
 	float real = 2.5;
@@ -18,7 +39,7 @@ int main(void) {
 
 	showMatrix(answer_matrix);
 	
-	
+	*/
 	
 	
 	/* MATRIZ POR VECTOR
