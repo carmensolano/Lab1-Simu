@@ -82,3 +82,26 @@ void transpose(Matrix M, Matrix &T){
             T.at(j).at(i) = M.at(i).at(j);
 }
 
+void getMinor(Matrix &M, int i, int j){
+	M.erase(M.begin()+i);
+	for(int i=0; i<M.size(); i++)
+		M.at(i).erase(M.at(i).begin()+j);
+
+}
+
+
+
+float determinante(Matrix M){
+	if(M.size() ==1)
+		return M.at(0).at(0);
+	else{
+		float det = 0.0;
+		for(int i=0; i<M.at(0).size(); i++){
+			Matrix minor;
+			copyMatrix(M, minor);
+			getMinor(minor, 0, i);
+			det += pow(-1, i)* M.at(0).at(i)* determinante(minor);
+		}
+		return det;
+	}	
+}
