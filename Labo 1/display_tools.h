@@ -64,3 +64,21 @@ Vector sumVector(Vector A, Vector B, int n){
 		R.at(i) = A.at(i) + B.at(i);
 	return R;	
 }
+
+Matrix sumMatrix(Matrix A, Matrix B, int n, int m){
+	Matrix R;
+	zeroes(R, n);
+	for(int i=0; i<n; i++)
+		for(int j=0; j<m; j++)
+			R.at(i).at(j) = A.at(i).at(j) + B.at(i).at(j);
+
+}
+
+
+void transpose(Matrix M, Matrix &T){
+    zeroes(T,M.size());
+    for(int i=0;i<M.size();i++)
+        for(int j=0;j<M.at(0).size();j++)
+            T.at(j).at(i) = M.at(i).at(j);
+}
+

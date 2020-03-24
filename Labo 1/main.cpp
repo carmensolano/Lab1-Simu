@@ -4,6 +4,25 @@
 
 int main(void) {
 
+	Matrix example_matrix ,transpose_matrix, ex_2;
+
+	zeroes(example_matrix,3);
+
+	example_matrix.at(0).at(0) = 1; example_matrix.at(0).at(1) = 2; example_matrix.at(0).at(2) = 3;
+	example_matrix.at(1).at(0) = 4; example_matrix.at(1).at(1) = 5; example_matrix.at(1).at(2) = 6;
+	example_matrix.at(2).at(0) = 7; example_matrix.at(2).at(1) = 8; example_matrix.at(2).at(2) = 9;
+
+	transpose(example_matrix, transpose_matrix);
+
+	showMatrix(transpose_matrix );
+
+	transpose(transpose_matrix, ex_2);
+
+	cout << endl; 
+	
+	showMatrix(ex_2);
+
+	/* SUMAR VECTORES
 	Vector a, b;
 
 	zeroes(a,5);
@@ -22,7 +41,7 @@ int main(void) {
 	b.at(4) = 5;
 
 	showVector(sumVector(a, b, 5));
-	
+	*/
 	
 	/* Matriz por Real
 	Matrix example_matrix, answer_matrix;
