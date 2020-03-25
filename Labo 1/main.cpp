@@ -4,6 +4,34 @@
 
 int main(void) {
 
+
+	Matrix example_matrix, cof_matrix, adjunta,inverse_matrix;
+
+	zeroes(example_matrix, 3);
+
+	example_matrix.at(0).at(0) = 2; example_matrix.at(0).at(1) = 2; example_matrix.at(0).at(2) = 3;
+	example_matrix.at(1).at(0) = 4; example_matrix.at(1).at(1) = 5; example_matrix.at(1).at(2) = 6;
+	example_matrix.at(2).at(0) = 7; example_matrix.at(2).at(1) = 8; example_matrix.at(2).at(2) = 9;
+
+	cofactors(example_matrix, cof_matrix);
+	cout << "Matriz de cofactores\n";
+	showMatrix(cof_matrix);
+	cout << endl; 
+	transpose(cof_matrix, adjunta);
+	cout << "Matriz adjunta\n"; 
+
+	showMatrix(adjunta);
+
+	determinant(example_matrix);
+	cout << endl; 
+	cout <<"Matriz inversa\n"; 
+	inverseMatrix(example_matrix, inverse_matrix);
+	showMatrix(inverse_matrix);
+
+
+
+	/******Matriz transpuesta
+
 	Matrix example_matrix ,transpose_matrix, ex_2;
 
 	zeroes(example_matrix,3);
@@ -21,6 +49,8 @@ int main(void) {
 	cout << endl; 
 	
 	showMatrix(ex_2);
+
+	******/
 
 	/* SUMAR VECTORES
 	Vector a, b;
